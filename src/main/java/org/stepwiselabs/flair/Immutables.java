@@ -33,4 +33,17 @@ public class Immutables {
         clone.addAll(list);
         return Collections.unmodifiableList(list);
     }
+
+    /**
+     * Returns an immutable {@link Set} from the passed {@link Set}.
+     *
+     * @param set
+     * @return An immutable {@link Set}
+     */
+    public static <T> Set<T> toImmutable(Set<T> set) {
+        Preconditions.checkNotNull(set, "set");
+        Set<T> clone = new HashSet<>();
+        clone.addAll(set);
+        return Collections.unmodifiableSet(clone);
+    }
 }

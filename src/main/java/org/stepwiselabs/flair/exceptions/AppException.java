@@ -23,7 +23,8 @@ public class AppException extends RuntimeException {
 
     /**
      * Constructs an {@linkplain AppException}.  The exception message is constructed by passing the given
-     * {@literal format} and {@literal args} directly to {@link String#format(String, Object...)}.
+     * {@literal format} and {@literal args} directly to {@link String#format(String, Object...)} to create the
+     * exception message.
      *
      * @param format A <a href="../util/Formatter.html#syntax">format string</a>
      * @param args   Arguments referenced by the format specifiers in the format
@@ -34,9 +35,8 @@ public class AppException extends RuntimeException {
      *                                specifier that is incompatible with the given arguments,
      *                                insufficient arguments given the format string, or other
      *                                illegal conditions.  For specification of all possible
-     *                                formatting errors, see the <a
-     *                                href="../util/Formatter.html#detail">Details</a> section of the
-     *                                formatter class specification.
+     *                                formatting errors, see the <a href="../util/Formatter.html#detail">Details</a>
+     *                                section of the formatter class specification.
      * @throws NullPointerException   If the <tt>format</tt> is <tt>null</tt>
      */
     public AppException(String format, Object... args) {
@@ -46,9 +46,8 @@ public class AppException extends RuntimeException {
 
     /**
      * Constructs an {@linkplain AppException}. The exception message is constructed by passing the given
-     * {@code format} and {@code args} directly to {@link String#format(String, Object...)}.  The
-     * {@code cause} is passed along to the super class.
-     *
+     * {@code format} and {@code args} directly to {@link String#format(String, Object...)} to create the
+     * exception message.
      * @param cause  {@link Throwable Cause} of the {@code Exception}.
      * @param format A <a href="../util/Formatter.html#syntax">format string</a>
      * @param args   Arguments referenced by the format specifiers in the format
